@@ -66,3 +66,49 @@ window.addEventListener("load", () => {
     selecionarModo(botaoParaAtivar, "auto");
   }
 });
+
+function aplicarZoom(textoZoom, animacao = true) {
+  let porcentagem;
+
+  if (textoZoom === "0.6") {
+    porcentagem = "100% 100%";
+  } else if (textoZoom === "1x") {
+    porcentagem = "140% 140%";
+  } else if (textoZoom === "2") {
+    porcentagem = "200% 200%";
+  }
+
+  if (hero && porcentagem) {
+    hero.style.transition = animacao ? "background-size 0.4s ease" : "none";
+    hero.style.backgroundSize = porcentagem;
+
+    localStorage.setItem("ultimoZoom", textoZoom);
+  }
+
+  linksZoom.forEach((l) => {
+    l.classList.remove("zoom-ativo");
+    l.style.color = "white";
+    if (l.innerText === textoZoom) {
+      l.classList.add("zoom-ativo");
+      l.style.color = "var(--cor-amarela)";
+    }
+  });
+}
+
+linksZoom.forEach((link) => {
+  link.addEventListener("click", (event) => {
+    event.preventDefault();
+    aplicarZoom(link.innerText, true);
+  });
+});
+
+window.addEventListener("load", () => {
+  const zoomSalvo = localStorage.getItem("ultimoZoom") || "1x";
+
+  aplicarZoom(zoomSalvo, false);
+
+  const ultimoModo = localStorage.getItem("ultimoModo");
+  const botaoParaAtivar =
+    document.getElementById(ultimoModo) || document.getElementById("foto-btn");
+  if (botaoParaAtivar) selecionarModo(botaoParaAtivar, "auto");
+});
