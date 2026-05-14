@@ -37,8 +37,11 @@ main {
 
 .title {
   color: white;
-  display: flex;
-  justify-content: center;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  flex-direction: row;
+  place-items: center;
+  gap: 4em;
   margin-block: 16px;
 }
 
@@ -60,4 +63,8 @@ main {
   bottom: 50%;
   transform: translateY(-50%);
   padding-inline: 5px;
+}
+
+#voltar {
+    color: white;
 }
