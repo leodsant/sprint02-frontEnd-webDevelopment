@@ -1,0 +1,258 @@
+:root {
+    --cor-amarela: #ffbb00;
+    --cor-cinza: #a7a7a7;
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+main {
+    background-color: black;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero {
+    height: 800px;
+    width: 360px;
+    border-radius: 30px;
+    position: relative;
+    outline: solid 5px rgb(85, 82, 82);
+    overflow: hidden;
+}
+
+.bg-img {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 800px;
+    width: 360px;
+    position: absolute;
+}
+
+.bg-img {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 800px;
+    width: 360px;
+    position: absolute;
+}
+
+.actions {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    width: 100%;
+    height: 250px;
+    background-color: rgba(0, 0, 0, 0.78);
+    border-radius: 0 0 30px 30px;
+    position: absolute;
+    bottom: 0;
+}
+
+.bg-img {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 800px;
+    width: 360px;
+    position: absolute;
+    transition: background-size 0.4s ease-in-out;
+    z-index: 1;
+    transform: scale(1.4);
+}
+
+.funcoes {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin-inline: 32px;
+    inset: 0;
+}
+
+#galeria-img {
+    width: 53px;
+    height: 53px;
+    cursor: pointer;
+}
+
+.botao-foto {
+    width: 84px;
+    height: 84px;
+    border-radius: 50%;
+    background-color: rgba(0, 0, 0, 0.67);
+    border: solid 2px white;
+}
+
+.fa-camera-rotate {
+    color: white;
+}
+
+.camera-rotate {
+    width: 54px;
+    height: 54px;
+    border-radius: 50%;
+    background-color: rgba(0, 0, 0, 0.67);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.modos {
+    display: flex;
+    gap: 30px;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    padding: 0 50%;
+    align-items: center;
+    margin-top: 32px;
+    scrollbar-width: none;
+}
+
+.modos::-webkit-scrollbar {
+    display: none;
+}
+
+.modos button {
+    background: none;
+    border: none;
+    color: white;
+    font-family: "Poppins", sans-serif;
+    font-size: 1.1rem;
+    cursor: pointer;
+    flex-shrink: 0;
+    transition: all 0.3s ease;
+}
+
+.ativos {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-top: 16px;
+    gap: 15em;
+    position: absolute;
+}
+
+.botao-flash {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: rgba(0, 0, 0, 0.7);
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.botao-modos {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: rgba(0, 0, 0, 0.7);
+    border: none;
+    color: var(--cor-cinza);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.zooms {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: center;
+    place-items: center;
+    width: 120px;
+    height: 30px;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 40px;
+}
+
+.zooms a {
+    text-decoration: none;
+    color: white;
+    opacity: 0.6;
+    transition: all 0.2s ease;
+    font-weight: normal;
+    font-size: 15px;
+}
+
+.zooms a.zoom-ativo {
+    color: var(--cor-amarela);
+    opacity: 1;
+    transform: scale(1.1);
+    width: 25px;
+    height: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.67);
+    border-radius: 50%;
+}
+
+.botao-ia {
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 50%;
+    border: none;
+}
+
+.botao-ia a {
+    text-decoration: none;
+    color: var(--cor-amarela);
+    cursor: pointer;
+}
+
+.flutuantes {
+    display: flex;
+    position: absolute;
+    bottom: 270px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.botao-ia {
+    position: absolute;
+    bottom: 270px;
+    right: 20px;
+}
+
+.ativos,
+.flutuantes,
+.actions,
+.botao-ia,
+.botao-flash,
+.botao-modos {
+    z-index: 10;
+}
+
+.zoom-ativo {
+    background-color: rgba(0, 0, 0, 0.6);
+    color: var(--cor-amarela) !important;
+    width: 35px;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
