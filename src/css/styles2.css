@@ -1,88 +1,94 @@
 :root {
-  --cor-amarela: #FFBB00;
-  --cor-cinza: #A7A7A7;
-  --cor-background: #0C0C0C;
-  --cor-icon: #4C4C4C;
+    --cor-amarela: #ffbb00;
+    --cor-cinza: #a7a7a7;
+    --cor-background: #0c0c0c;
+    --cor-icon: #4c4c4c;
 }
 
 * {
-  margin: 0px;
-  padding: 0px;
-  box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
 }
 
 body {
-  font-family: "Poppins", sans-serif;
-  font-weight: 400;
-  font-style: normal;
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
 }
 
 main {
-  background-color: black;
-  height: 100vh;
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+    background-color: black;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .hero {
-  height: 800px;
-  width: 360px;
-  background-color: var(--cor-background);
-  border-radius: 30px;
-  position: relative;
-  outline:solid 5px rgb(85, 82, 82);
+    height: 800px;
+    width: 360px;
+    background-color: var(--cor-background);
+    border-radius: 30px;
+    position: relative;
+    outline: solid 5px rgb(85, 82, 82);
 }
 
 .icon {
-  width: 54px;
-  height: 54px;
-  border-radius: 50%;
-  background-color: var(--cor-icon);
-  display: flex;
-  justify-content: center;
-  align-items: center;
+    width: 54px;
+    height: 54px;
+    border-radius: 50%;
+    background-color: var(--cor-icon);
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .icons {
-  color: white;
-  font-size: 14px;
-  margin-top: 46px;
-  margin-inline: 10px;
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
+    color: white;
+    font-size: 14px;
+    margin-top: 46px;
+    margin-inline: 10px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
 }
 
 .item {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 4px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
 }
 
 .row {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
 }
 
 .modos {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  place-items: center;
-  margin-top: 32px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    place-items: center;
+    margin-top: 32px;
 }
 
-.modos a {
-  text-decoration: none;
-  color: white;
+.modos button {
+    background: none;
+    border: none;
+    color: white;
+    font-family: "Poppins", sans-serif;
+    font-size: 1.1rem;
+    cursor: pointer;
+    flex-shrink: 0;
+    transition: all 0.3s ease;
 }
 
 .editar {
-  color: white;
-  position: absolute;
-  bottom: 40px;
-  right: 28px;
+    color: white;
+    position: absolute;
+    bottom: 40px;
+    right: 28px;
 }
