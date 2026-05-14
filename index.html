@@ -3,65 +3,147 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Sprint 2 - Front-End | Web Development</title>
-        <link rel="stylesheet" href="./src/css/styles.css" />
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <title>JOVI — Camera System</title>
         <link
-            href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+            href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;1,300&display=swap"
             rel="stylesheet"
         />
-        <script
-            src="https://kit.fontawesome.com/b522bdfe69.js"
-            crossorigin="anonymous"
-        ></script>
+        <link rel="stylesheet" href="src/css/styles.css" />
     </head>
     <body>
-        <main>
-            <div id="hero" class="hero">
-                <img id="img-bg" class="bg-img" src="./src/assets/imgs/bg-img.jpg" alt="">
-                <div class="ativos">
-                    <button id="btn-flash" class="botao-flash" style="color: var(--cor-amarela);">
-                        <i class="fa-solid fa-bolt-lightning fa-lg"></i>
-                    </button>
-                    <button class="botao-modos">
-                        <i class="fa-solid fa-table-cells fa-lg"></i>
-                    </button>
-                </div>
+        <div class="brilho"></div>
+        <nav>
+            <div class="logo">MindCore<span>.</span></div>
+            <span class="nav-pill" id="navPill">Camera System</span>
+            <button
+                class="logout-btn"
+                id="logoutBtn"
+                style="display: none"
+                onclick="logout()"
+            >
+                Sair
+            </button>
+        </nav>
 
-                <div class="flutuantes">
-                    <div class="zooms">
-                        <a href="">0.6</a>
-                        <div class="botao-1x">
-                            <a style="color: var(--cor-amarela)" href="">1x</a>
-                        </div>
-                        <a href="">2</a>
-                    </div>
-                </div>
-                <button class="botao-ia"><a id="btn-ia">IA</a></button>
+        <section class="page active" id="home">
+            <div class="hero">
+                <div class="hero-tag">Novo · Sistema de Câmera</div>
+                <h1>Capture o<br />momento com <em>JOVI</em></h1>
+                <p class="hero-desc">
+                    Uma interface minimalista e intuitiva pensada para quem vive
+                    rápido. Controle total da câmera, sem complicação.
+                </p>
+                <button class="hero-v" onclick="showPage('login')">
+                    Acessar o sistema
+                </button>
+            </div>
 
-                <div class="actions">
-                    <div class="modos">
-                        <button id="video-btn">Vídeo</button>
-                        <button id="foto-btn" style="color: var(--cor-amarela)">
-                            Foto
-                        </button>
-                        <button id="mais-btn">Mais</button>
-                    </div>
-                    <div class="funcoes">
-                        <img
-                            id="galeria-img"
-                            src="./src/assets/imgs/galeria.jpg"
-                            alt=""
-                            onclick="window.location.href='index3.html'"
-                        />
-                        <button id="btn-foto" class="botao-foto"></button>
-                        <div class="camera-rotate">
-                            <i class="fa-solid fa-camera-rotate fa-xl"></i>
-                        </div>
-                    </div>
+            <div class="features">
+                <div class="feat">
+                    <div class="feat-icon">⚡</div>
+                    <h3>Captura Instantânea</h3>
+                    <p>
+                        Zero delay. A imagem acontece no momento certo, sempre.
+                    </p>
                 </div>
-        </main>
+                <div class="feat">
+                    <div class="feat-icon">🎨</div>
+                    <h3>UI Minimalista</h3>
+                    <p>
+                        Interface limpa e direta ao ponto. Foco no que importa.
+                    </p>
+                </div>
+                <div class="feat">
+                    <div class="feat-icon">📱</div>
+                    <h3>Mobile-first</h3>
+                    <p>
+                        Projetado para a palma da mão. Experiência fluida e
+                        natural.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section class="page" id="login">
+            <div class="login-card">
+
+                <p class="login-sub">Entre para acessar o sistema de câmera</p>
+                <br>
+                <div class="field">
+                    <label for="username">Usuário</label>
+                    <input
+                        type="text"
+                        id="username"
+                        placeholder="Seu nome de usuário"
+                        autocomplete="off"
+                    />
+                    <span class="error-msg" id="userErr"></span>
+                </div>
+                <div class="field">
+                    <label for="password">Senha</label>
+                    <input
+                        type="password"
+                        id="password"
+                        placeholder="••••••••"
+                    />
+                    <span class="error-msg" id="passErr"></span>
+                </div>
+                <button class="login-btn" onclick="handleLogin()">
+                    Entrar
+                </button>
+            </div>
+        </section>
+
+        <section class="page" id="dashboard">
+            <div class="hero">
+                <div class="hero-tag">
+                    Bem-vindo,
+                    <span id="welcomeName" style="color: var(--accent)"
+                        >usuário</span
+                    >
+                    👋
+                </div>
+                <h1>Capture o<br />momento com <em>JOVI</em></h1>
+                <p class="hero-desc">
+                    Uma interface minimalista e intuitiva pensada para quem vive
+                    rápido. Agora você tem acesso total às ferramentas.
+                </p>
+                    <a
+                        href="index1.html"
+                        target="_blank"
+                        class="hero-v prototype-btn"
+                    >
+                        Conheça nosso protótipo
+                    </a>
+                </div>
+            </div>
+
+            <div class="features">
+                <div class="feat">
+                    <div class="feat-icon">⚡</div>
+                    <h3>Captura Instantânea</h3>
+                    <p>
+                        Zero delay. A imagem acontece no momento certo, sempre.
+                    </p>
+                </div>
+                <div class="feat">
+                    <div class="feat-icon">🎨</div>
+                    <h3>UI Minimalista</h3>
+                    <p>
+                        Interface limpa e direta ao ponto. Foco no que importa.
+                    </p>
+                </div>
+                <div class="feat">
+                    <div class="feat-icon">📱</div>
+                    <h3>Mobile-first</h3>
+                    <p>
+                        Projetado para a palma da mão. Experiência fluida e
+                        natural.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <script src="src/js/script.js"></script>
     </body>
-    <script src="./src/js/script.js"></script>
 </html>
