@@ -37,7 +37,7 @@ botoesModos.forEach((botao) => {
     selecionarModo(botao);
     if (botao.id === "mais-btn") {
       localStorage.setItem("ultimoModo", "foto-btn");
-      window.location.href = "index2.html";
+      window.location.href = "./index2.html";
     }
   });
 });

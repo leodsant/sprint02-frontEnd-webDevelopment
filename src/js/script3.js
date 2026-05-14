@@ -1,7 +1,7 @@
 const imagens = [
-  "./src/assets/imgs/galeria1.jpg",
-  "./src/assets/imgs/galeria2.jpg",
-  "./src/assets/imgs/galeria3.jpg",
+  "../assets/imgs/galeria1.jpg",
+  "../assets/imgs/galeria2.jpg",
+  "../assets/imgs/galeria3.jpg",
 ];
 
 const leftArrow = document.getElementById("left-arrow");
