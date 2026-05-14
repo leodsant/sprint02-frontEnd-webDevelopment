@@ -14,10 +14,12 @@ botaoFlash.addEventListener("click", () => {
 });
 
 botaoIa.addEventListener("click", () => {
-  if (botaoIa.style.color === "var(--cor-amarela)") {
-    botaoIa.style.color = "var(--cor-cinza)";
-  } else {
-    botaoIa.style.color = "var(--cor-amarela)";
+  const iaPrompt = prompt(
+    "Digite um prompt para a IA MindCore gerar na sua foto:",
+  );
+
+  if (iaPrompt) {
+    alert("Comando recebido! Agora você pode tirar sua foto");
   }
 });
 
@@ -49,7 +51,14 @@ function selecionarModo(botao, animacao = "smooth") {
 }
 
 botoesModos.forEach((botao) => {
-  botao.addEventListener("click", () => selecionarModo(botao));
+  botao.addEventListener("click", () => {
+    selecionarModo(botao);
+
+    if (botao.id === "mais-btn") {
+      localStorage.setItem("ultimoModo", "foto-btn");
+      window.location.href = "index2.html";
+    }
+  });
 });
 
 botaoFoto.addEventListener("click", () => {
