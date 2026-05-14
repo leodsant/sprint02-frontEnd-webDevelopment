@@ -27,15 +27,20 @@ main {
 .hero {
     height: 800px;
     width: 360px;
-    background-image: url("/src/assets/imgs/bg-img.jpg");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
     border-radius: 30px;
     position: relative;
     outline: solid 5px rgb(85, 82, 82);
     overflow: hidden;
     transition: background-size 0.4s ease-in-out;
+}
+
+.bg-img {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 800px;
+    width: 360px;
+    position: absolute;
 }
 
 .actions {
@@ -114,8 +119,11 @@ main {
 
 .ativos {
     display: flex;
-    justify-content: space-between;
-    margin: 24px;
+    justify-content: center;
+    width: 100%;
+    margin-top: 16px;
+    gap: 15em;
+    position: absolute;
 }
 
 .botao-flash {
