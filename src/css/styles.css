@@ -42,6 +42,15 @@ main {
     position: absolute;
 }
 
+.bg-img {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 800px;
+    width: 360px;
+    position: absolute;
+}
+
 .actions {
     display: flex;
     flex-direction: column;
