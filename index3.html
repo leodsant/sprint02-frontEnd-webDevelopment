@@ -20,20 +20,35 @@
         <main>
             <div class="hero">
                 <div class="title">
-                    <i id="voltar" class="fa-solid fa-arrow-left fa-xl"></i>
+                    <i
+                        id="voltar"
+                        class="fa-solid fa-arrow-left fa-xl"
+                        onclick="window.location.href = 'index1.html'"
+                    ></i>
                     <h3>Galeria</h3>
                 </div>
                 <div class="fotos">
-                    <img class="img" src="./src/assets/imgs/galeria1.jpg" alt="">
-                    <img class="img" src="./src/assets/imgs/galeria2.jpg" alt="">
-                    <img class="img" src="./src/assets/imgs/galeria3.jpg" alt="">
+                    <div id="trilho" class="fotos-trilho">
+                        <img
+                            id="galeria-imagem"
+                            class="img-galeria"
+                            src="./src/assets/imgs/galeria1.jpg"
+                            alt=""
+                        />
+                    </div>
                 </div>
                 <div class="arrows">
-                    <i class="fa-solid fa-angle-left fa-2xl"></i>
-                    <i class="fa-solid fa-angle-right fa-2xl"></i>
+                    <i
+                        id="left-arrow"
+                        class="fa-solid fa-angle-left fa-2xl"
+                    ></i>
+                    <i
+                        id="right-arrow"
+                        class="fa-solid fa-angle-right fa-2xl"
+                    ></i>
                 </div>
             </div>
         </main>
     </body>
-    <script src="./src/script2.js"></script>
+    <script src="./src/js/script3.js"></script>
 </html>
