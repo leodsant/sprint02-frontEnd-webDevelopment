@@ -36,35 +36,58 @@ main {
 }
 
 .title {
-  color: white;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  flex-direction: row;
-  place-items: center;
-  gap: 4em;
-  margin-block: 16px;
+    color: white;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    flex-direction: row;
+    place-items: center;
+    gap: 4em;
+    margin-block: 16px;
 }
 
-.img {
-  width: 360px;
-  height: auto;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  position: absolute;
+.img-galeria {
+    width: 360px;
+    height: auto;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .arrows {
-  color: rgba(255, 255, 255, 0.4);
-  position: absolute;
-  display: flex;
-  justify-content: space-between;
-  width: 100%;
-  bottom: 50%;
-  transform: translateY(-50%);
-  padding-inline: 5px;
+    color: rgba(255, 255, 255, 0.4);
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    bottom: 50%;
+    transform: translateY(-50%);
+    padding-inline: 5px;
 }
 
 #voltar {
     color: white;
+    cursor: pointer;
+}
+
+.fotos-container {
+    position: relative;
+    width: 100%;
+    max-width: 600px;
+    overflow: hidden;
+}
+
+.fotos-carousel {
+    width: 100%;
+    display: none;
+}
+
+.fotos-item.active {
+    display: block;
+}
+
+#left-arrow,
+#right-arrow {
+    cursor: pointer;
+    color: var(--cor-background);
+    opacity: 0.7;
 }
