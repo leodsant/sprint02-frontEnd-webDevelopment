@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Sprint 2 - Front-End | Web Development</title>
+        <link rel="stylesheet" href="./src/css/styles1.css" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+            rel="stylesheet"
+        />
+        <script
+            src="https://kit.fontawesome.com/b522bdfe69.js"
+            crossorigin="anonymous"
+        ></script>
+    </head>
+    <body>
+        <main>
+            <div id="hero" class="hero">
+                <img id="img-bg" class="bg-img" src="./src/assets/imgs/bg-img.jpg" alt="">
+                <div class="ativos">
+                    <button id="btn-flash" class="botao-flash" style="color: var(--cor-amarela);">
+                        <i class="fa-solid fa-bolt-lightning fa-lg"></i>
+                    </button>
+                    <button class="botao-modos">
+                        <i class="fa-solid fa-table-cells fa-lg"></i>
+                    </button>
+                </div>
+
+                <div class="flutuantes">
+                    <div class="zooms">
+                        <a href="">0.6</a>
+                        <div class="botao-1x">
+                            <a style="color: var(--cor-amarela)" href="">1x</a>
+                        </div>
+                        <a href="">2</a>
+                    </div>
+                </div>
+                <button class="botao-ia"><a id="btn-ia">IA</a></button>
+
+                <div class="actions">
+                    <div class="modos">
+                        <button id="video-btn">Vídeo</button>
+                        <button id="foto-btn" style="color: var(--cor-amarela)">
+                            Foto
+                        </button>
+                        <button id="mais-btn">Mais</button>
+                    </div>
+                    <div class="funcoes">
+                        <img
+                            id="galeria-img"
+                            src="./src/assets/imgs/galeria.jpg"
+                            alt=""
+                            onclick="window.location.href='index3.html'"
+                        />
+                        <button id="btn-foto" class="botao-foto"></button>
+                        <div class="camera-rotate">
+                            <i class="fa-solid fa-camera-rotate fa-xl"></i>
+                        </div>
+                    </div>
+                </div>
+        </main>
+    </body>
+    <script src="./src/js/script1.js"></script>
+</html>
